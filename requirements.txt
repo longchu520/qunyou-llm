@@ -1,0 +1,34 @@
+# ============================================
+# QunYou-LLM — 群聊数据大模型微调框架
+# ============================================
+
+# ---------- 基础 ----------
+torch>=2.5.0
+numpy>=1.24
+safetensors>=0.4
+
+# ---------- 数据处理 ----------
+datasets>=2.14
+sentence-transformers>=3.0
+
+# ---------- 微调 (PEFT + QLoRA) ----------
+transformers>=4.40
+accelerate>=0.28
+peft>=0.10
+trl>=0.9
+bitsandbytes>=0.43
+
+# ---------- 向量检索 (RAG) ----------
+faiss-cpu>=1.7
+sentence-transformers>=3.0
+
+# ---------- 模型服务 ----------
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.5
+
+# ---------- 工具 ----------
+scipy
+sentencepiece
+protobuf
+tqdm

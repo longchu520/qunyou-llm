@@ -1,0 +1,27 @@
+# Modelfile — 用于 Ollama 导入微调后的群聊模型
+
+# 从本地 HuggingFace 模型目录加载
+# (Ollama 0.3+ 支持直接从 HF 格式加载)
+FROM /root/qunyou/output/qlora-checkpoints/merged_model
+
+# ChatML 模板 (与 Qwen2.5 格式一致)
+TEMPLATE """{{- if .System }}{{ .System }}{{ end }}
+{{- range .Messages }}
+{{- if eq .Role "user" }}<|im_start|>user
+{{ .Content }}<|im_end|>
+{{- else if eq .Role "assistant" }}<|im_start|>assistant
+{{ .Content }}<|im_end|>
+{{- end }}
+{{- end }}
+<|im_start|>assistant
+"""
+
+# 推理参数
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|im_start|>"
+PARAMETER num_ctx 2048
+
+# 系统提示词 (可选 — 定义模型的人设)
+# SYSTEM "你是一个活泼的群聊成员，说话简短随意，用词口语化。"

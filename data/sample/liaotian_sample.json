@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "name": "群聊对话记录示例",
+    "description": "展示数据格式的示例文件，非真实数据"
+  },
+  "chatInfo": {
+    "name": "示例群聊",
+    "type": "group",
+    "selfName": "用户A"
+  },
+  "messages": [
+    {
+      "id": "msg_001",
+      "seq": "1",
+      "timestamp": 1656501841000,
+      "time": "2022-06-29 19:24:01",
+      "sender": {
+        "uid": "user_001",
+        "name": "群友甲"
+      },
+      "type": "type_1",
+      "content": {
+        "text": "有人打游戏吗",
+        "elements": [
+          {"type": "text", "data": {"text": "有人打游戏吗"}}
+        ]
+      }
+    },
+    {
+      "id": "msg_002",
+      "seq": "2",
+      "timestamp": 1656501843000,
+      "time": "2022-06-29 19:24:03",
+      "sender": {
+        "uid": "user_002",
+        "name": "群友乙"
+      },
+      "type": "type_1",
+      "content": {
+        "text": "打什么",
+        "elements": [
+          {"type": "text", "data": {"text": "打什么"}}
+        ]
+      }
+    },
+    {
+      "id": "msg_003",
+      "seq": "3",
+      "timestamp": 1656501845000,
+      "time": "2022-06-29 19:24:05",
+      "sender": {
+        "uid": "user_003",
+        "name": "群友丙"
+      },
+      "type": "type_1",
+      "content": {
+        "text": "来打LOL",
+        "elements": [
+          {"type": "text", "data": {"text": "来打LOL"}}
+        ]
+      }
+    },
+    {
+      "id": "msg_004",
+      "seq": "4",
+      "timestamp": 1656501848000,
+      "time": "2022-06-29 19:24:08",
+      "sender": {
+        "uid": "user_002",
+        "name": "群友乙"
+      },
+      "type": "type_1",
+      "content": {
+        "text": "走起",
+        "elements": [
+          {"type": "text", "data": {"text": "走起"}}
+        ]
+      }
+    }
+  ],
+  "statistics": {
+    "totalMessages": 4,
+    "messageTypes": {"text": 4}
+  }
+}
